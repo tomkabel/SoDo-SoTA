@@ -215,8 +215,10 @@ Naming one (or the `sota` router) just makes the routing explicit. From there:
 
 ## License
 
-[CC BY 4.0](LICENSE) — Creative Commons Attribution 4.0 International. Use,
-adapt, and share freely (including commercially); just give attribution.
+© 2026 Martin Holovsky. Licensed under [CC BY 4.0](LICENSE) — Creative Commons
+Attribution 4.0 International. Use, adapt, and share freely (including
+commercially); just give attribution: *"SOTA Engineering Skills by Martin
+Holovsky, CC BY 4.0."*
 
 `profiles/` holds personal stack profiles and is git-ignored except
 `profiles/example.md.template` — copy that to `profiles/<you>.md` and edit it;
