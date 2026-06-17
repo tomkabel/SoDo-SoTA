@@ -1,0 +1,71 @@
+# Stack profile — <your name or team>
+
+Consulted by the `sota` router (Operating principles §4). These choices are the
+**defaults in BUILD mode** and the **expected baseline in AUDIT mode** — a
+deviation from this profile in your repos is worth flagging (Info/Low) even when
+it isn't a generic SOTA violation. This file is the single place personalization
+lives; the library itself stays generic.
+
+**How to use this**
+
+1. Copy this file to `profiles/<you>.md` (anything matching `profiles/*.md` is
+   git-ignored, so your real profile stays local and is never committed).
+2. Replace the examples below with your actual stack. Delete sections that don't
+   apply. The more specific you are, the better the router's defaults.
+
+Everything below is a **fictional example** — replace it with your own.
+
+## Languages & frameworks
+
+- **Python** — primary backend. FastAPI + Pydantic at boundaries,
+  `mypy --strict` (type errors are build failures), uv + lockfile. See
+  `sota-python`.
+- **TypeScript** — frontend. `strict: true`, schema validation at boundaries.
+
+## Data stores
+
+- **Postgres** — primary application store. Parameterized queries, least-
+  privilege roles, migrations reviewed for lock safety (`sota-databases`).
+- **Redis** — caching / session state where needed.
+
+## Platform & delivery
+
+- **Kubernetes** + GitOps (promotion and rollback are git operations; no manual
+  `kubectl apply` to prod). Container builds multi-stage, non-root, distroless/
+  minimal, digest-pinned bases. → `sota-kubernetes`, `sota-cloud-infrastructure`.
+- **GitHub Actions** CI: actions pinned by SHA, least-privilege token, OIDC over
+  stored keys. → `sota-devsecops`.
+
+## Observability stack
+
+`sota-observability` is principle-first. Record what your "Prometheus / Loki /
+Jaeger" map to in your stack and apply the rules verbatim; the guidance is
+backend-agnostic. Default to OpenTelemetry for instrumentation.
+
+## Security conventions
+
+- **Secrets**: a real secrets manager (Vault/OpenBao/cloud KMS) via short-lived
+  credentials; secret scanning (gitleaks/detect-secrets) in pre-commit **and**
+  CI. Never commit plaintext secrets. → `sota-secrets-management`.
+- **Identity/auth**: OIDC IdP; map groups → app roles explicitly; short-lived
+  tokens; passkeys/WebAuthn preferred. → `sota-identity-access`.
+- **Commits**: signed, conventional commits; protected branches.
+
+## Licensing & jurisdiction
+
+- Dependency license policy (e.g. permissive-only: MIT/Apache-2.0/BSD) enforced
+  in CI; copyleft/NC dependencies are findings.
+- Applicable privacy regime (e.g. GDPR) for any personal data — retention,
+  erasure, transfer rules from `sota-privacy-compliance` are mandatory.
+
+## Projects (optional — trigger extra skills per repo)
+
+| Project | What it is | Always also load |
+|---|---|---|
+| example-api | public-facing API service | api-design, code-security |
+| example-pipeline | batch/stream data pipeline | data-engineering, databases |
+
+## Audit defaults for this profile (optional)
+
+- State any house rules that raise severity in your context, e.g. "any internet-
+  exposed datastore or plaintext secret is Critical by default in this stack."

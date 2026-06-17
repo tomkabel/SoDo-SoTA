@@ -1,0 +1,10 @@
+# Personal stack profiles are private — never commit a real one.
+# Only the example template is tracked; the router loads profiles/*.md, and the
+# template's .template suffix keeps it from being auto-loaded.
+profiles/*
+!profiles/example.md.template
+
+# OS / editor cruft
+.DS_Store
+*.swp
+*~
