@@ -44,8 +44,8 @@ scripts/check-invariants.sh   # the invariants below, enforced
 **`SKILL.md`**
 
 - YAML frontmatter with exactly two fields: `name` and `description`. If the
-  description contains a colon, use a block scalar (`>` or `|`) so the YAML stays
-  valid.
+   description contains a colon, use a block scalar (`>` or `|`) so the YAML stays
+   valid. Duplicate or extra frontmatter fields fail the invariant check.
 - A `description` that says *when* to use the skill (BUILD and AUDIT triggers)
   and a list of trigger keywords — Claude Code matches prompts against this.
 - Body: a short "when to use", a **BUILD** workflow and an **AUDIT** workflow, a
@@ -75,8 +75,10 @@ are marked "needs verification", never asserted.
 `scripts/check-invariants.sh` runs in pre-commit and CI and fails the build on:
 
 1. any tracked `*.md` over **500 lines**;
-2. any `skills/*/SKILL.md` description at **1024 characters or more**;
-3. any `skills/*/rules/*.md` missing an **`## Audit checklist`** heading;
+2. invalid `skills/*/SKILL.md` frontmatter, duplicate/extra fields, or a
+   description at **1024 characters or more**;
+3. any `skills/*/rules/*.md` whose final `##` section is not
+   **`## Audit checklist`**;
 4. any **internal/private reference** leaking into tracked files.
 
 Secrets are scanned separately by **gitleaks** (config in `.gitleaks.toml`).
@@ -88,11 +90,18 @@ pipx install pre-commit     # or: brew install pre-commit
 pre-commit install          # run the same checks on every commit
 ```
 
+The invariant checker uses Python 3 and `PyYAML` for real YAML parsing. The
+pre-commit hook provisions `PyYAML==6.0.2` automatically; for direct script runs
+outside pre-commit, install that package in your active Python environment.
+
 Run the invariant checks any time:
 
 ```sh
 ./scripts/check-invariants.sh
 ```
+
+When editing the invariant checker itself, also run
+`python3 -m unittest scripts/test_check_invariants.py`.
 
 ## Submitting a change
 

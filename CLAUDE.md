@@ -22,13 +22,18 @@ changes are edits to Markdown held to a few hard invariants. See
 `scripts/check-invariants.sh` fails the build on:
 
 1. any tracked `*.md` over **500 lines**;
-2. any `skills/*/SKILL.md` description at **1024 characters or more**;
-3. any `skills/*/rules/*.md` missing an **`## Audit checklist`** heading;
+2. invalid `skills/*/SKILL.md` frontmatter, duplicate/extra fields, or a
+   description at **1024 characters or more**;
+3. any `skills/*/rules/*.md` whose final `##` section is not
+   **`## Audit checklist`**;
 4. an **internal-name denylist** — the library must stay generic.
 
 Secrets are scanned by **gitleaks** (`.gitleaks.toml`, which disables only the
 noisy entropy-based `generic-api-key` rule so the security skills' intentional
 secret-shaped examples don't false-positive).
+
+The invariant checker uses Python 3 plus `PyYAML`; pre-commit and CI install the
+package, while direct local script runs need it in the active Python environment.
 
 ## Conventions that matter
 

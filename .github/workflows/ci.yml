@@ -15,6 +15,10 @@ jobs:
     steps:
       # actions/checkout v4.2.2, pinned by commit SHA (sota-devsecops).
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Install invariant-check dependencies
+        run: python3 -m pip install --disable-pip-version-check --quiet PyYAML==6.0.2
+      - name: Test invariant checker
+        run: python3 -m unittest scripts/test_check_invariants.py
       - name: Check invariants
         run: ./scripts/check-invariants.sh
 
