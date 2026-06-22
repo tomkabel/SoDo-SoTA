@@ -8,3 +8,12 @@ profiles/*
 .DS_Store
 *.swp
 *~
+
+# Python checker/test caches
+__pycache__/
+*.py[cod]
+
+# Local SQLite database artifacts
+*.db
+*.sqlite
+*.sqlite3
