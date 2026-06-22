@@ -14,8 +14,10 @@ repos:
   - repo: local
     hooks:
       - id: sota-invariants
-        name: SOTA-skills invariants (<=500 lines, audit checklists, no internal refs)
-        entry: scripts/check-invariants.sh
-        language: script
+        name: SOTA-skills invariants (<=500 lines, descriptions <=1024 chars, audit checklists, no internal refs)
+        entry: python scripts/check_invariants.py
+        language: python
+        additional_dependencies:
+          - PyYAML==6.0.2
         pass_filenames: false
         always_run: true

@@ -226,7 +226,7 @@ Rules for findings:
 - Prioritize by incident impact, not by purity: a missing wide event on the
   checkout path outranks printf logging in an internal cron.
 
-## Audit checklist (meta — did the audit itself cover everything)
+## Audit checklist
 
 - [ ] 2–3 critical user journeys traced through actual code, entry to
       async tail, including the failure path.
