@@ -1,8 +1,7 @@
 ---
 name: sota-network-security
-description: >
-  Use this skill to build and audit network security posture, segmentation, and exposure controls. Trigger when designing or reviewing zero trust, ZTNA, microsegmentation, Kubernetes NetworkPolicy/Cilium policy depth, default-deny ingress/egress, service mesh, mTLS, WAF/API gateway, egress allowlists, metadata endpoint blocking, DNS/TLS/PKI security, certificate lifecycle, WireGuard, bastions, or identity-aware proxy access. Do not use for cloud VPC/subnet provisioning alone, app auth logic, or telemetry/detection content.
-  keywords: network security, zero trust, segmentation, NetworkPolicy, Cilium, mTLS, egress, WAF, PKI, ZTNA
+description: >-
+  Use this skill to build and audit network security posture, segmentation, and exposure controls. Trigger on network security, zero trust, NIST 800-207, ZTNA, microsegmentation, segmentation audit, east-west traffic, lateral movement, flat network, over-broad rules, Kubernetes NetworkPolicy/CiliumNetworkPolicy, Cilium/Hubble, default-deny ingress/egress, service mesh, Istio, Linkerd, SPIFFE, mTLS, internal traffic encryption, WAF/API gateway, ingress, egress allowlists, egress gateway, FQDN allowlist, IMDS/169.254.169.254 metadata blocking, DNS firewall, DNSSEC, DoH, TLS 1.3, ACME, step-ca, private CA, PKI/certificate lifecycle, WireGuard, bastions, and identity-aware proxy access. Do not use for cloud VPC/subnet provisioning alone, app auth logic, or telemetry/detection content.
 ---
 
 # SOTA Network Security

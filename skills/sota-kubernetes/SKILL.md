@@ -1,8 +1,7 @@
 ---
 name: sota-kubernetes
-description: >
-  Use this skill to build, operate, harden, and audit the Kubernetes platform layer. Trigger when configuring or reviewing clusters, control plane, etcd, kube-apiserver, kubelet, RBAC, ServiceAccounts, admission control, Pod Security Admission, Kyverno, Gatekeeper/OPA, ValidatingAdmissionPolicy, Argo CD, Flux, GitOps, operators, CRDs, admission webhooks, Helm/Kustomize supply chain, multi-tenancy, upgrades, CVE response, CIS/kube-bench, or audit logging. Do not use for pod sandboxing internals, NetworkPolicy/CNI depth, or cloud IAM/VPC setup.
-  keywords: Kubernetes, k8s, RBAC, ServiceAccount, admission, Kyverno, Gatekeeper, GitOps, Helm, audit log
+description: >-
+  Use this skill to build, operate, harden, and audit the Kubernetes platform layer. Trigger on Kubernetes/k8s clusters, EKS, GKE, AKS, kubeadm, k3s, k0s, Talos, control plane, etcd, kube-apiserver, kubelet, version skew, upgrades, CVE response, RBAC, Role/ClusterRole/ClusterRoleBinding, ServiceAccounts, admission control, Pod Security Admission/PSA, Kyverno, Gatekeeper/OPA, ValidatingAdmissionPolicy/VAP, Argo CD, Flux, GitOps, operators, CRDs, admission webhooks, Helm/Kustomize supply chain, multi-tenancy, CIS benchmark, kube-bench, CNI wiring, and Kubernetes audit logging. Do not use for pod sandboxing internals, NetworkPolicy/CNI policy depth, or cloud IAM/VPC setup.
 ---
 
 # SOTA Kubernetes Platform Security & Operations

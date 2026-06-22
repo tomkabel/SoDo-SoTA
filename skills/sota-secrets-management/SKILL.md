@@ -1,8 +1,7 @@
 ---
 name: sota-secrets-management
-description: >
-  Use this skill to build and audit secrets management across code, infrastructure, and repositories. Trigger when creating, storing, injecting, rotating, revoking, scanning, or remediating credentials such as API keys, tokens, passwords, private keys, signing keys, TLS/SSH keys, database URLs, .env files, Vault/OpenBao, cloud secret managers, KMS, SOPS/age, sealed-secrets, external-secrets, workload identity, OIDC federation, SPIFFE/SPIRE, secret scanning, leaked keys, git history purge, honeytokens, or least-privilege token design. Do not use for general app auth or IAM policy design unless credential lifecycle is the focus.
-  keywords: secrets management, credential, API key, token, Vault, KMS, OIDC federation, gitleaks, rotation, honeytoken
+description: >-
+  Use this skill to build and audit secrets management across code, infrastructure, and repositories. Trigger on secret, credential, API key, token, password, passphrase, private/signing/JWT/TLS/SSH keys, database password, connection string, .env/dotenv, environment variable, Vault, OpenBao, AWS/GCP/Azure secret managers, Key Vault, KMS, envelope encryption, SOPS, age, sealed-secrets, external-secrets, workload identity, OIDC federation, SPIFFE/SPIRE, IAM role, GitHub Actions OIDC, short-lived credentials, rotation, revocation, key expiry, gitleaks, trufflehog, secret scanning, leaked/hardcoded/committed keys, git history purge, honeytokens, pre-commit hooks, secret injection, least-privilege token design, and kid rotation. Do not use for general app auth or IAM policy design unless credential lifecycle is the focus.
 ---
 
 # SOTA Secrets Management

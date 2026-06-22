@@ -1,8 +1,7 @@
 ---
 name: sota-code-security
-description: >
-  Use this skill to build and audit secure application code that crosses trust boundaries. Trigger when implementing or reviewing endpoints, handlers, auth flows, sessions, JWT/OAuth, uploads, payments, multi-tenancy, crypto use, parsers, webhooks, CLI/exec wrappers, LLM agents, RAG/tool calls, or vulnerabilities such as injection, XSS, CSRF, SSRF, IDOR, deserialization, prompt injection, and data exposure. Do not use for identity infrastructure, network segmentation, or secret lifecycle design except where code handling is in scope.
-  keywords: secure coding, security audit, OWASP, CWE, injection, XSS, SSRF, authz, JWT, prompt injection
+description: >-
+  Use this skill to build and audit secure application code that crosses trust boundaries. Trigger on endpoints, handlers, authn/authz, login/signup, sessions, JWT/OAuth/PKCE, uploads, payments, multi-tenancy, crypto, parsers, webhooks, CLI/exec wrappers, untrusted data ingestion, RAG corpora, LLM agents/tool calls, OWASP, CWE, injection/SQLi, XSS, CSRF, CORS/CSP, SSRF, IDOR/BOLA, deserialization, prompt injection, data exposure, rate limits, and "is this code safe?" Do not use for identity infrastructure, network segmentation, or secret lifecycle design except where code handling is in scope.
 ---
 
 # SOTA Code Security

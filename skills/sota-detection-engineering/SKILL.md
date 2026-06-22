@@ -1,8 +1,7 @@
 ---
 name: sota-detection-engineering
-description: >
-  Use this skill to build and audit detection engineering, SOC, threat hunting, and incident response capability. Trigger when writing or reviewing Sigma/YARA/Falco/Tetragon/Suricata/SIEM rules, detection-as-code pipelines, MITRE ATT&CK coverage, alert triage, SOAR, threat intel, deception, IR playbooks, forensics, purple-team validation, or questions like "can we detect this?" Do not use for raw observability pipelines or design-time threat modeling unless runtime detections or IR are the deliverable.
-  keywords: detection engineering, SOC, SIEM, Sigma, YARA, ATT&CK, threat hunting, SOAR, incident response
+description: >-
+  Use this skill to build and audit detection engineering, SOC, threat hunting, and incident response capability. Trigger on detective controls, detection-as-code, Sigma, YARA/YARA-X, Falco, Tetragon, Suricata, SIEM, KQL, SPL, EQL, ATT&CK/Navigator coverage, Pyramid of Pain, IOC/IOA/TTP, threat intel, TIP, STIX/TAXII, OCSF/ECS, alert triage, tuning, SOAR, runbooks, IR playbooks, NIST 800-61/PICERL, forensics, chain of custody, tabletop, purple team, Atomic Red Team, Caldera, Stratus, deception, honeypots, honeytokens, canaries, MTTD, false positives, or "can we detect this?" Do not use for raw observability pipelines or design-time threat modeling unless runtime detections or IR are the deliverable.
 ---
 
 # SOTA Detection Engineering, SOC & Incident Response

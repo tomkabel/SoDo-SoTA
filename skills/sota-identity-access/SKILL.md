@@ -1,8 +1,7 @@
 ---
 name: sota-identity-access
-description: >
-  Use this skill to build and audit identity infrastructure and access-management design. Trigger when configuring or reviewing OIDC/OAuth, SAML, SCIM, IdPs such as Kanidm/Keycloak/Authentik/Zitadel/Entra/Okta, SSO, MFA/passkeys, RBAC/ABAC/ReBAC, OPA/Cedar/OpenFGA/SpiceDB, provisioning and deprovisioning, access reviews, privileged/break-glass access, workload identity, or audits for orphaned accounts, weak MFA, wildcard redirects, stale tokens, and over-privileged roles. Do not use for app-level login/session/JWT validation mechanics.
-  keywords: IAM, IdP, OIDC, OAuth, SAML, SCIM, SSO, MFA, RBAC, workload identity
+description: >-
+  Use this skill to build and audit identity infrastructure and access-management design. Trigger on IAM, IdP/identity provider, OIDC, OAuth 2.x/2.1, PKCE, DPoP, PAR, RAR, JAR, FAPI, SAML, XML signature wrapping, SCIM, Kanidm, Keycloak, Authentik, Zitadel, Entra, Okta, SSO, single logout, MFA, passkeys, FIDO2/WebAuthn, CAEP/SSF, RBAC, ABAC, ReBAC, Zanzibar/OpenFGA/SpiceDB, OPA/Cedar, provisioning/deprovisioning, joiner-mover-leaver, access reviews, PAM, privileged/break-glass access, workload identity, SPIFFE, orphaned/dormant accounts, wildcard redirects, stale tokens, over-privileged roles, NIST 800-63, IAL, AAL, and FAL. Do not use for app-level login/session/JWT validation mechanics.
 ---
 
 # SOTA Identity & Access

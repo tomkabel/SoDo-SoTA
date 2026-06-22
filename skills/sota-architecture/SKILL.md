@@ -1,8 +1,7 @@
 ---
 name: sota-architecture
-description: >
-  Use this skill to build and audit software architecture and system-design decisions. Trigger when designing or refactoring services, choosing monolith/microservices/serverless, modeling domains and boundaries, applying DDD/hexagonal/clean architecture, planning messaging/eventing, resilience, scalability, multi-tenancy, cloud-native delivery, feature flags, ADRs, or reviewing architectural quality and anti-patterns. Do not use for code-level security, cloud resource provisioning, or observability-only work.
-  keywords: architecture, system design, DDD, microservices, event-driven, resilience, scalability, ADR, architecture audit
+description: >-
+  Use this skill to build and audit software architecture and system-design decisions. Trigger on architecture, system design, service/module boundaries, monolith vs microservices vs serverless, DDD, bounded contexts, aggregates, hexagonal/clean architecture, event-driven design, Kafka, NATS, JetStream, message bus/broker/pubsub/queue, sagas, outbox, idempotency, CQRS, timeouts, retries, circuit breakers, backpressure, resilience, scalability, caching, sharding, multi-tenancy, 12-factor/cloud-native delivery, feature flags, ADRs, architecture/design review, and anti-patterns. Do not use for code-level security, cloud resource provisioning, or observability-only work.
 ---
 
 # SOTA Architecture (2026)
