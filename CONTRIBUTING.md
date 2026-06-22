@@ -75,8 +75,9 @@ are marked "needs verification", never asserted.
 `scripts/check-invariants.sh` runs in pre-commit and CI and fails the build on:
 
 1. any tracked `*.md` over **500 lines**;
-2. any `skills/*/rules/*.md` missing an **`## Audit checklist`** heading;
-3. any **internal/private reference** leaking into tracked files.
+2. any `skills/*/SKILL.md` description at **1024 characters or more**;
+3. any `skills/*/rules/*.md` missing an **`## Audit checklist`** heading;
+4. any **internal/private reference** leaking into tracked files.
 
 Secrets are scanned separately by **gitleaks** (config in `.gitleaks.toml`).
 

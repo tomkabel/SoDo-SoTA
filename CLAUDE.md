@@ -22,8 +22,9 @@ changes are edits to Markdown held to a few hard invariants. See
 `scripts/check-invariants.sh` fails the build on:
 
 1. any tracked `*.md` over **500 lines**;
-2. any `skills/*/rules/*.md` missing an **`## Audit checklist`** heading;
-3. an **internal-name denylist** — the library must stay generic.
+2. any `skills/*/SKILL.md` description at **1024 characters or more**;
+3. any `skills/*/rules/*.md` missing an **`## Audit checklist`** heading;
+4. an **internal-name denylist** — the library must stay generic.
 
 Secrets are scanned by **gitleaks** (`.gitleaks.toml`, which disables only the
 noisy entropy-based `generic-api-key` rule so the security skills' intentional
