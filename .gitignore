@@ -9,6 +9,9 @@ profiles/*
 *.swp
 *~
 
+# Local AI tooling configuration – per-user session state, not project-level
+.commandcode/
+
 # Python checker/test caches
 __pycache__/
 *.py[cod]
