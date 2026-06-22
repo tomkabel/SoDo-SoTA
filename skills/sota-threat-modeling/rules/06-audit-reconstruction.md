@@ -199,7 +199,7 @@ Meta-findings — the audit also rates the team's PROCESS:
 - Expired risk acceptances, orphaned threats without dispositions, abuse-case
   tests deleted/skipped → findings per `04`/`05` checklists.
 
-## Audit checklist (meta — quality bar for the audit itself)
+## Audit checklist
 
 - [ ] Artifact inventory recorded, including what was NOT provided; nothing
       silently skipped — unverifiable surface reported as such.

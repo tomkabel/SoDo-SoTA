@@ -81,7 +81,20 @@ class FrontmatterParsingTests(unittest.TestCase):
 
 
 class AuditChecklistTests(unittest.TestCase):
-    def test_final_audit_checklist_section_accepts_suffix(self) -> None:
+    def test_final_audit_checklist_section_matches_exact_heading(self) -> None:
+        lines = [
+            "# Rule",
+            "## Body",
+            "content",
+            "## Audit checklist",
+            "- [ ] checked",
+        ]
+        self.assertEqual(
+            check_invariants.last_level_two_heading(lines),
+            check_invariants.AUDIT_CHECKLIST_HEADING,
+        )
+
+    def test_suffixed_audit_checklist_heading_is_not_exact(self) -> None:
         lines = [
             "# Rule",
             "## Body",
@@ -89,8 +102,9 @@ class AuditChecklistTests(unittest.TestCase):
             "## Audit checklist - quality gate",
             "- [ ] checked",
         ]
-        self.assertTrue(
-            check_invariants.last_level_two_heading(lines).startswith("## Audit checklist")
+        self.assertNotEqual(
+            check_invariants.last_level_two_heading(lines),
+            check_invariants.AUDIT_CHECKLIST_HEADING,
         )
 
 

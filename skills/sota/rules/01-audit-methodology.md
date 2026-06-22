@@ -228,7 +228,7 @@ Deliver in exactly this order:
 
 ---
 
-## Audit checklist — quality gate on the audit itself
+## Audit checklist
 
 **Coverage**
 - [ ] Scope agreed: repos, branch, pinned commit, environments,

@@ -24,7 +24,7 @@ except ModuleNotFoundError:
 MAX_LINES = 500
 MAX_DESCRIPTION_CHARS = 1024
 REQUIRED_SKILL_FIELDS = {"name", "description"}
-AUDIT_CHECKLIST_HEADING_PREFIX = "## Audit checklist"
+AUDIT_CHECKLIST_HEADING = "## Audit checklist"
 EXCLUDED_DENYLIST_FILES = {
     "scripts/check-invariants.sh",
     "scripts/check_invariants.py",
@@ -181,8 +181,8 @@ def check_audit_checklists() -> bool:
 
     for path in run_git_ls_files("skills/*/rules/*.md"):
         heading = last_level_two_heading(read_text(path).splitlines())
-        if not heading or not heading.startswith(AUDIT_CHECKLIST_HEADING_PREFIX):
-            note(f"MISSING FINAL '{AUDIT_CHECKLIST_HEADING_PREFIX}' SECTION: {path}")
+        if heading != AUDIT_CHECKLIST_HEADING:
+            note(f"MISSING FINAL '{AUDIT_CHECKLIST_HEADING}' SECTION: {path}")
             failed = True
 
     if not failed:

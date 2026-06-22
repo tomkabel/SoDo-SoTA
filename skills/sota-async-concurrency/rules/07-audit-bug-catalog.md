@@ -239,7 +239,7 @@ ordering assumption with no enforcement.
 4. **Read the hottest handler end-to-end** and prove its timeout chain.
 5. Report with interleavings, not vibes.
 
-## Audit checklist (meta — the whole catalog)
+## Audit checklist
 
 - [ ] #1 fire-and-forget: every spawn owned, errors observed
 - [ ] #2 missing await: truthy-promise checks, forEach(async), return-in-try
