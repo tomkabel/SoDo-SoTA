@@ -1,24 +1,8 @@
 ---
 name: sota-detection-engineering
-description: >-
-  State-of-the-art detection engineering, SOC, threat hunting, and incident
-  response (2026). Use when BUILDING detective controls or SOC capability —
-  writing Sigma/YARA/Falco/Tetragon/Suricata rules, detection-as-code pipelines,
-  mapping coverage to MITRE ATT&CK, SIEM/data-lake detections, alert triage and
-  SOAR, threat hunts, threat-intel/TIP, deception (honeypots/canaries), IR
-  playbooks, or validating detections via adversary emulation (Atomic Red Team /
-  Caldera / Stratus) — AND when AUDITING detection & IR posture (can we detect
-  this? does this alert fire? is the runbook real? what's our ATT&CK coverage?).
-  This skill owns DETECTIVE controls, SOC workflow, hunting, and IR; it turns
-  ops telemetry into security detections (sota-observability owns the telemetry
-  pipeline) and catches in production the threats sota-threat-modeling enumerates
-  at design time. Trigger keywords: detection engineering, detection-as-code,
-  Sigma, YARA, YARA-X, Falco, Tetragon, Suricata, SIEM, KQL, SPL, EQL, ATT&CK,
-  ATT&CK Navigator, Pyramid of Pain, threat hunting, threat intel, TIP, STIX,
-  TAXII, IOC, IOA, TTP, SOC, alert fatigue, tuning, SOAR, runbook, incident
-  response, IR playbook, NIST 800-61, PICERL, forensics, chain of custody,
-  post-incident review, tabletop, purple team, adversary emulation, honeypot,
-  honeytoken, canary, OCSF, detection coverage, MTTD, false positive.
+description: >
+  Use this skill to build and audit detection engineering, SOC, threat hunting, and incident response capability. Trigger when writing or reviewing Sigma/YARA/Falco/Tetragon/Suricata/SIEM rules, detection-as-code pipelines, MITRE ATT&CK coverage, alert triage, SOAR, threat intel, deception, IR playbooks, forensics, purple-team validation, or questions like "can we detect this?" Do not use for raw observability pipelines or design-time threat modeling unless runtime detections or IR are the deliverable.
+  keywords: detection engineering, SOC, SIEM, Sigma, YARA, ATT&CK, threat hunting, SOAR, incident response
 ---
 
 # SOTA Detection Engineering, SOC & Incident Response

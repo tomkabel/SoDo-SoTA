@@ -1,7 +1,8 @@
 ---
 name: sota-code-security
-description: >-
-  State-of-the-art secure coding and security auditing rules (2026 baseline). Claude should use this skill whenever it is BUILDING or modifying code that crosses a trust boundary — implementing endpoints, handlers, auth/login/signup flows, sessions, JWT/OAuth, file uploads, payments, multi-tenant features, crypto/secrets handling, parsers, CLI/exec wrappers, LLM agents or tool-calling — AND whenever it is AUDITING or reviewing code for security: requests mentioning security review, audit, pentest-prep, vulnerability hunt, threat model, hardening, OWASP, CWE, injection, XSS, CSRF, SSRF, IDOR, deserialization, prompt injection, secrets leak, or "is this code safe". Trigger keywords: secure, security, vulnerability, exploit, harden, audit, authn, authz, authentication, authorization, crypto, TLS, sanitize, validate, injection, SQLi, XSS, CSRF, SSRF, IDOR, JWT, OAuth, PKCE, passkey, argon2, CSP, CORS, upload, rate limit, prompt injection, tool-call security, data ingestion, feed, parser, file upload, archive, zip bomb, decompression bomb, webhook, scraping, RAG corpus, deserialization, polyglot.
+description: >
+  Use this skill to build and audit secure application code that crosses trust boundaries. Trigger when implementing or reviewing endpoints, handlers, auth flows, sessions, JWT/OAuth, uploads, payments, multi-tenancy, crypto use, parsers, webhooks, CLI/exec wrappers, LLM agents, RAG/tool calls, or vulnerabilities such as injection, XSS, CSRF, SSRF, IDOR, deserialization, prompt injection, and data exposure. Do not use for identity infrastructure, network segmentation, or secret lifecycle design except where code handling is in scope.
+  keywords: secure coding, security audit, OWASP, CWE, injection, XSS, SSRF, authz, JWT, prompt injection
 ---
 
 # SOTA Code Security

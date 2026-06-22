@@ -1,19 +1,8 @@
 ---
 name: sota-secrets-management
 description: >
-  State-of-the-art secrets management for building and auditing software. Claude should use
-  this skill whenever a task involves creating, storing, injecting, rotating, or scanning for
-  credentials — or reviewing code/infrastructure for secret leaks and misuse. Trigger keywords:
-  secret, secrets management, credential, API key, token, password, passphrase, private key,
-  signing key, JWT secret, TLS key, SSH key, database password, connection string, .env,
-  dotenv, environment variable, Vault, OpenBao, AWS Secrets Manager, GCP Secret Manager,
-  Azure Key Vault, KMS, envelope encryption, SOPS, age, sealed-secrets, external-secrets,
-  workload identity, OIDC federation, SPIFFE, SPIRE, IAM role, GitHub Actions OIDC,
-  short-lived credential, rotation, revocation, key expiry, gitleaks, trufflehog,
-  secret scanning, leaked key, hardcoded secret, committed secret, git history purge,
-  honeytoken, pre-commit hook, secret injection, least privilege token, kid rotation.
-  Use in BUILD mode when implementing secrets handling; use in AUDIT mode when sweeping a
-  repository for leaked, hardcoded, or mishandled secrets.
+  Use this skill to build and audit secrets management across code, infrastructure, and repositories. Trigger when creating, storing, injecting, rotating, revoking, scanning, or remediating credentials such as API keys, tokens, passwords, private keys, signing keys, TLS/SSH keys, database URLs, .env files, Vault/OpenBao, cloud secret managers, KMS, SOPS/age, sealed-secrets, external-secrets, workload identity, OIDC federation, SPIFFE/SPIRE, secret scanning, leaked keys, git history purge, honeytokens, or least-privilege token design. Do not use for general app auth or IAM policy design unless credential lifecycle is the focus.
+  keywords: secrets management, credential, API key, token, Vault, KMS, OIDC federation, gitleaks, rotation, honeytoken
 ---
 
 # SOTA Secrets Management

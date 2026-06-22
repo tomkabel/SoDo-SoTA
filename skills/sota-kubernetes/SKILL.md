@@ -1,7 +1,8 @@
 ---
 name: sota-kubernetes
-description: >-
-  State-of-the-art Kubernetes platform security and operations (2026) for cloud-managed (EKS/GKE/AKS) and self-hosted clusters (kubeadm, k3s/k0s, Talos Linux on ARM). Use when building, operating, hardening, or auditing the cluster PLATFORM layer: control plane and etcd, API server and kubelet hardening, RBAC and ServiceAccounts, admission control and policy-as-code (Pod Security Admission, Kyverno, Gatekeeper/OPA, ValidatingAdmissionPolicy), GitOps controllers (Argo CD, Flux), operators/CRDs/admission webhooks, Helm/Kustomize supply chain at admission, multi-tenancy, cluster lifecycle/upgrades/CVE response, and Kubernetes audit logging. Trigger keywords: Kubernetes, k8s, cluster, control plane, etcd, kube-apiserver, kubelet, RBAC, ClusterRole, ServiceAccount, admission controller, Pod Security Admission, PSA, Kyverno, Gatekeeper, OPA, ValidatingAdmissionPolicy, Argo CD, Flux, GitOps, operator, CRD, admission webhook, Helm, Kustomize, multi-tenancy, vCluster, Talos, k3s, k0s, kubeadm, EKS, GKE, AKS, CIS benchmark, kube-bench, audit log, version skew. NOT for pod-level securityContext/seccomp internals (sota-sandboxing) or NetworkPolicy/CNI depth (sota-network-security).
+description: >
+  Use this skill to build, operate, harden, and audit the Kubernetes platform layer. Trigger when configuring or reviewing clusters, control plane, etcd, kube-apiserver, kubelet, RBAC, ServiceAccounts, admission control, Pod Security Admission, Kyverno, Gatekeeper/OPA, ValidatingAdmissionPolicy, Argo CD, Flux, GitOps, operators, CRDs, admission webhooks, Helm/Kustomize supply chain, multi-tenancy, upgrades, CVE response, CIS/kube-bench, or audit logging. Do not use for pod sandboxing internals, NetworkPolicy/CNI depth, or cloud IAM/VPC setup.
+  keywords: Kubernetes, k8s, RBAC, ServiceAccount, admission, Kyverno, Gatekeeper, GitOps, Helm, audit log
 ---
 
 # SOTA Kubernetes Platform Security & Operations
