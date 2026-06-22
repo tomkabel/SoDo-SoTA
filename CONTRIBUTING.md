@@ -76,7 +76,7 @@ are marked "needs verification", never asserted.
 
 1. any tracked `*.md` over **500 lines**;
 2. invalid `skills/*/SKILL.md` frontmatter, duplicate/extra fields, or a
-   description at **1024 characters or more**;
+   description over **1024 characters**;
 3. any `skills/*/rules/*.md` whose final `##` section is not
    **`## Audit checklist`**;
 4. any **internal/private reference** leaking into tracked files.

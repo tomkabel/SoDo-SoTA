@@ -23,7 +23,7 @@ changes are edits to Markdown held to a few hard invariants. See
 
 1. any tracked `*.md` over **500 lines**;
 2. invalid `skills/*/SKILL.md` frontmatter, duplicate/extra fields, or a
-   description at **1024 characters or more**;
+   description over **1024 characters**;
 3. any `skills/*/rules/*.md` whose final `##` section is not
    **`## Audit checklist`**;
 4. an **internal-name denylist** — the library must stay generic.

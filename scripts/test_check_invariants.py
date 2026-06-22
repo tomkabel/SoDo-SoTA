@@ -71,6 +71,14 @@ class FrontmatterParsingTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             check_invariants.load_skill_frontmatter(path)
 
+    def test_description_at_maximum_length_is_accepted(self) -> None:
+        description = "x" * check_invariants.MAX_DESCRIPTION_CHARS
+        self.assertFalse(check_invariants.description_exceeds_limit(description))
+
+    def test_description_over_maximum_length_exceeds_limit(self) -> None:
+        description = "x" * (check_invariants.MAX_DESCRIPTION_CHARS + 1)
+        self.assertTrue(check_invariants.description_exceeds_limit(description))
+
 
 class AuditChecklistTests(unittest.TestCase):
     def test_final_audit_checklist_section_accepts_suffix(self) -> None:

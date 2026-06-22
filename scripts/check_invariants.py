@@ -6,8 +6,8 @@ from __future__ import annotations
 import re
 import subprocess
 import sys
+from collections.abc import Iterable
 from pathlib import Path
-from typing import Iterable
 
 try:
     import yaml
@@ -123,6 +123,10 @@ def load_skill_frontmatter(path: Path) -> dict[str, object]:
     return data
 
 
+def description_exceeds_limit(description: str) -> bool:
+    return len(description) > MAX_DESCRIPTION_CHARS
+
+
 def check_line_budget() -> bool:
     print(f"[1/4] Markdown files <= {MAX_LINES} lines")
     failed = False
@@ -140,7 +144,7 @@ def check_line_budget() -> bool:
 
 
 def check_skill_descriptions() -> bool:
-    print(f"[2/4] Skill descriptions < {MAX_DESCRIPTION_CHARS} characters")
+    print(f"[2/4] Skill descriptions <= {MAX_DESCRIPTION_CHARS} characters")
     failed = False
 
     for path in run_git_ls_files("skills/*/SKILL.md"):
@@ -154,8 +158,8 @@ def check_skill_descriptions() -> bool:
         description = frontmatter["description"]
         assert isinstance(description, str)
         length = len(description)
-        if length >= MAX_DESCRIPTION_CHARS:
-            note(f"TOO LONG ({length} chars, must be < {MAX_DESCRIPTION_CHARS}): {path}")
+        if description_exceeds_limit(description):
+            note(f"TOO LONG ({length} chars, must be <= {MAX_DESCRIPTION_CHARS}): {path}")
             failed = True
 
     if not failed:

@@ -234,7 +234,7 @@ Naming one (or the `sota` router) just makes the routing explicit. From there:
 See [CONTRIBUTING.md](CONTRIBUTING.md). The short version: keep skills generic,
 verify fast-moving claims against primary sources, keep every file ≤ 500 lines,
 keep skill frontmatter to exactly `name` + `description`, keep descriptions
-under 1024 characters, and make the final `##` section of each rules file the
+at most 1024 characters, and make the final `##` section of each rules file the
 audit checklist. These are enforced by `scripts/check-invariants.sh`
 (pre-commit + CI; Python 3 + PyYAML) plus gitleaks. Security issues and conduct:
 [SECURITY.md](SECURITY.md), [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
